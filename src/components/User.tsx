@@ -2,10 +2,9 @@ import { UserProps } from "../types/user"
 import { MdLocationPin } from 'react-icons/md'
 import classes from './User.module.css'
 // import { Link } from 'react-router-dom'
-// import { Outlet } from "react-router-dom"
 
 
-const user = ({avatar_url, login, name, location, followers, following}: UserProps) => {
+const User = ({avatar_url, login, name, location, followers, following}: UserProps) => {
   return (
     <div>
         <div className={classes.user}>
@@ -31,7 +30,7 @@ const user = ({avatar_url, login, name, location, followers, following}: UserPro
                 <p className={classes.number}>{following}</p>
             </div>
         </div>
-        {/* <Link to={`${Outlet}`}>Ver melhores projectos</Link> */}
+        {/* <Link to={}>Ver melhores projectos</Link> */}
         <a href={`https://github.com/${login}?tab=repositories`} target="_blank" rel="noopener noreferrer">Ver Repositorios</a>
         </div>
         <br />
@@ -39,4 +38,4 @@ const user = ({avatar_url, login, name, location, followers, following}: UserPro
   )
 }
 
-export default user
+export default User
